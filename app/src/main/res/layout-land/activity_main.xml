@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/result_canvas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/calc_type"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginTop="7dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/basic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="34dp"
+                android:layout_marginEnd="10dp"
+                android:drawableBottom="@drawable/underline_basic"
+                android:drawableTint="@color/orange"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/basic"
+                android:textColor="@color/orange"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/scientific"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toEndOf="@id/basic"
+                android:drawableBottom="@drawable/underline_scientific"
+                android:drawableTint="@color/bg_color"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/scientific"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="34dp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/operation"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="34dp"
+                android:autoSizeStepGranularity="2sp"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="end"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:autoSizeMaxTextSize="24sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/result"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginEnd="34dp"
+                android:autoSizeStepGranularity="2sp"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="end"
+                android:textColor="@color/white"
+                android:textSize="48sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/result_canvas"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal">
+
+        <LinearLayout
+            android:id="@+id/sixth_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/seven"
+                android:layout_width="62dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/ic_shape_primary_buttons"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:paddingTop="7dp"
+                android:text="7"
+                android:textColor="@color/orange"
+                android:textSize="32sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/eight"
+                android:layout_width="62dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/ic_shape_primary_buttons"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:paddingTop="7dp"
+                android:text="8"
+                android:textColor="@color/orange"
+                android:textSize="32sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/nine"
+                android:layout_width="62dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/ic_shape_primary_buttons"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:paddingTop="7dp"
+                android:text="9"
+                android:textColor="@color/orange"
+                android:textSize="32sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/operations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sixth_row"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/fifth_row"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/four"
+                    android:layout_width="62dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/ic_shape_primary_buttons"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:paddingTop="7dp"
+                    android:text="4"
+                    android:textColor="@color/orange"
+                    android:textSize="32sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/five"
+                    android:layout_width="62dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/ic_shape_primary_buttons"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:paddingTop="7dp"
+                    android:text="5"
+                    android:textColor="@color/orange"
+                    android:textSize="32sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/six"
+                    android:layout_width="62dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@drawable/ic_shape_primary_buttons"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:paddingTop="7dp"
+                    android:text="6"
+                    android:textColor="@color/orange"
+                    android:textSize="32sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fourth_row"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/one"
+                    android:layout_width="62dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/ic_shape_primary_buttons"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:paddingTop="7dp"
+                    android:text="1"
+                    android:textColor="@color/orange"
+                    android:textSize="32sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/two"
+                    android:layout_width="62dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/ic_shape_primary_buttons"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:paddingTop="7dp"
+                    android:text="2"
+                    android:textColor="@color/orange"
+                    android:textSize="32sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/three"
+                    android:layout_width="62dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/ic_shape_primary_buttons"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:paddingTop="7dp"
+                    android:text="3"
+                    android:textColor="@color/orange"
+                    android:textSize="32sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/dot"
+                    android:layout_width="62dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/ic_shape_primary_buttons"
+                    android:foreground="@drawable/ic_dot"
+                    android:foregroundGravity="center"
+                    android:textColor="@color/orange"
+                    android:textSize="32sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/multiply"
+                    android:layout_width="62dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/ic_shape_primary_buttons"
+                    android:backgroundTint="@color/orange"
+                    android:foreground="@drawable/ic_multiply"
+                    android:foregroundGravity="center" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/divide"
+                    android:layout_width="62dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/ic_shape_primary_buttons"
+                    android:backgroundTint="@color/orange"
+                    android:foreground="@drawable/ic_divide"
+                    android:foregroundGravity="center" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/equal"
+                    android:layout_width="142dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/ic_shape_primary_buttons"
+                    android:backgroundTint="@color/white"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:paddingTop="7dp"
+                    android:text="="
+                    android:textColor="@color/black"
+                    android:textSize="32sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/zero"
+            android:layout_width="62dp"
+            android:layout_height="140dp"
+            android:layout_toEndOf="@id/sixth_row"
+            android:background="@drawable/ic_shape_primary_buttons"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:paddingTop="7dp"
+            android:text="0"
+            android:textColor="@color/orange"
+            android:textSize="32sp" />
+
+        <LinearLayout
+            android:id="@+id/math_symbols"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/zero"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/left_parentheses"
+                android:layout_width="62dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/ic_shape_primary_buttons"
+                android:fontFamily="@font/poppins_medium"
+                android:paddingTop="7dp"
+                android:text="("
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/orange"
+                android:textSize="20sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/right_parentheses"
+                android:layout_width="62dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/ic_shape_primary_buttons"
+                android:fontFamily="@font/poppins_medium"
+                android:paddingTop="7dp"
+                android:text=")"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/orange"
+                android:textSize="20sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/sin_operator"
+                android:layout_width="62dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/ic_shape_primary_buttons"
+                android:foreground="@drawable/ic_sin"
+                android:foregroundGravity="center" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/deg_operator"
+                android:layout_width="62dp"
+                android:layout_height="60dp"
+                android:background="@drawable/ic_shape_primary_buttons"
+                android:foreground="@drawable/ic_deg"
+                android:foregroundGravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/math_symbols"
+            android:layout_alignStart="@id/math_symbols"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/sum"
+                android:layout_width="62dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/ic_shape_primary_buttons"
+                android:backgroundTint="@color/orange"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:paddingTop="7dp"
+                android:text="+"
+                android:textColor="@color/black"
+                android:textSize="32sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/minus"
+                android:layout_width="62dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/ic_shape_primary_buttons"
+                android:backgroundTint="@color/orange"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:paddingTop="7dp"
+                android:text="-"
+                android:textColor="@color/black"
+                android:textSize="32sp" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/clear"
+                android:layout_width="62dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/ic_shape_primary_buttons"
+                android:backgroundTint="@color/light_grey"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Ac"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/backspace"
+                android:layout_width="62dp"
+                android:layout_height="60dp"
+                android:background="@drawable/ic_shape_primary_buttons"
+                android:backgroundTint="@color/light_grey"
+                android:foreground="@drawable/ic_remove"
+                android:foregroundGravity="center" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
